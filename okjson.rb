@@ -1,4 +1,5 @@
 # encoding: UTF-8
+# frozen_string_literal: true
 #
 # Copyright 2011, 2012 Keith Rarick
 #
@@ -341,7 +342,7 @@ private
             end
           end
           if rubydoesenc?
-            a[w] = '' << uchar
+            a[w] = ''.dup << uchar
             w += 1
           else
             w += ucharenc(a, w, uchar)
